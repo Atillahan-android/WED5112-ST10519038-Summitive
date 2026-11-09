@@ -1,0 +1,222 @@
+:root {
+    --rose-red: #B34744;
+    --stone-gray: #9C9092;
+    --terracotta: #964F49;
+    --soft-teal: #7BB1B3;
+    --sage: #A3C0BC;
+    --brick-red: #A92E33;
+    --navy: #244058;
+    --teal: #528682;
+    --text-dark: #2b2b2b;
+    --text-soft: #444;
+    --page-bg: #f7f7f7;
+    --panel-bg: #ffffff;
+    --border: #e8e8e8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    background: var(--page-bg);
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 20px 40px;
+    background: var(--stone-gray);
+    border-bottom: 1px solid var(--border);
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: auto;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--panel-bg);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1.1;
+}
+
+header img {
+    height: 90px;
+    width: auto;
+    max-width: 400px;
+    object-fit: contain;
+    display: block;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: var(--rose-red);
+    color: white;
+    padding: 14px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: #f1f1f1;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 10;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background: var(--brick-red);
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px 50px;
+}
+
+.booking-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.booking-form,
+.booking-info {
+    background: var(--panel-bg);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 28px 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.booking-form h2,
+.booking-info h2 {
+    margin-top: 0;
+    color: var(--navy);
+    font-size: clamp(1.5rem, 2.2vw, 2rem);
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.booking-form input,
+.booking-form select,
+.booking-info textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font: inherit;
+    background: #fff;
+}
+
+.booking-info p {
+    color: var(--text-soft);
+    margin-bottom: 14px;
+}
+
+.booking-info textarea {
+    min-height: 200px;
+    resize: vertical;
+}
+
+.booking-form input[type="submit"],
+.nav-button {
+    border: none;
+    border-radius: 25px;
+    background: var(--rose-red);
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1rem;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.booking-form input[type="submit"]:hover,
+.nav-button:hover {
+    background: var(--brick-red);
+}
+
+.booking-image {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin: 30px auto 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.nav-button {
+    margin-top: 8px;
+}
+
+footer {
+    background: var(--navy);
+    color: var(--panel-bg);
+    text-align: center;
+    padding: 18px 20px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 20px;
+    }
+
+    .header-brand {
+        width: 100%;
+        margin-right: 0;
+        justify-content: space-between;
+    }
+
+    .booking-layout {
+        grid-template-columns: 1fr;
+    }
+}
