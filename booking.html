@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking for The Turk Boutique Hotel | Amazing Accommodation in Durban</title>
+    <link rel="stylesheet" href="css/Booking.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-brand">
+            <h1>Booking for The Turk Boutique Hotel</h1>
+            <img src="Images/Logo of business.jpg" alt="The hotel logo" style="height: 100px; width: 500px;"> <!-- image about the hotel logo -->
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Dropdown V</button>
+            <div class="dropdown-content">
+                <a href="Home_page.html">Home Page</a>
+                <a href="Contact_us.html">Contact Us</a>
+                <a href="booking.html">Book Now</a>
+                <a href="gallery_page.html">Gallery</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="booking-layout">
+            <form id="bookingForm" class="booking-form">
+                <h2>Book Your Stay</h2>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkin" name="checkin" required>
+
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" id="checkout" name="checkout" required>
+
+                <label for="room_type">Room Type:</label>
+                <select id="room_type" name="room_type">
+                    <option value="single" data-price="1150">Queen Room</option>
+                    <option value="double" data-price="1450">Family Room</option>
+                    <option value="suite" data-price="1480">3-Sleeper Room</option>
+                </select>
+
+                <input type="submit" value="Book Now">
+            </form>
+
+            <section class="booking-info">
+                <h2>Booking Information</h2>
+                <p>Thank you for choosing The Turk Boutique Hotel. Please fill out the form to book your stay with us.</p>
+                <div id="booking_receipt" class="booking-receipt">
+                    <h3>Receipt</h3>
+                    <p>Fill in the booking details to see the total price.</p>
+                </div>
+                <textarea id="booking_info" name="booking_info" placeholder="Booking details will be displayed here" readonly></textarea>
+            </section>
+        </div>
+
+        <img class="booking-image" src="Images/Queen_room_Theturkhotel.jpg" alt="The room image">
+        <button class="nav-button" type="button" onclick="location.href='Home_page.html'">home page</button>
+    </main>
+    <footer>
+        <p>&copy; 2024 The Turk Boutique Hotel. All rights reserved.</p>    
+    </footer>
+    <script src="javascript/javascript.js"></script>
+</body>
+</html>
